@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 5 JS</title>
+</head>
+<!-- Thử thách lập trình số 1
+Quay lại với hai đội thể dục dụng cụ, Dolphins và Koalas! Có một
+môn thể dục dụng cụ mới, hoạt động theo cách khác.
+Mỗi đội thi đấu 3 lần, sau đó tính điểm trung bình của 3 lần (do đó
+mỗi đội có một điểm trung bình).
+Một đội chỉ thắng nếu có điểm trung bình gấp đôi điểm trung bình của đội kia.
+Nếu không, không có đội nào thắng!
+Nhiệm vụ của bạn:
+1. Tạo một hàm mũi tên 'calcAverage' để tính điểm trung bình của 3 lần
+2. Sử dụng hàm để tính điểm trung bình cho cả hai đội
+3. Tạo một hàm 'checkWinner' lấy điểm trung bình của mỗi đội
+làm tham số ('avgDolhins' và 'avgKoalas'), sau đó ghi lại người chiến thắng
+vào bảng điều khiển, cùng với điểm chiến thắng, theo quy tắc trên.
+Ví dụ: "Koalas thắng (30 đấu với 13)"
+4. Sử dụng hàm 'checkWinner' để xác định người chiến thắng cho cả Dữ liệu 1 và
+Dữ liệu 2
+5. Bỏ qua các lần rút thăm lần này
+Dữ liệu thử nghiệm:
+§ Dữ liệu 1: Điểm của Dolphins là 44, 23 và 71. Điểm của Koalas là 65, 54 và 49
+§ Dữ liệu 2: Điểm của Dolphins là 85, 54 và 41. Điểm của Koalas là 23, 34 và 27
+Gợi ý:
+§ Để tính trung bình của 3 giá trị, hãy cộng tất cả lại với nhau và chia cho 3
+§ Để kiểm tra xem số A có ít nhất gấp đôi số B hay không, hãy kiểm tra xem A >= 2 * B.
+Áp dụng điều này vào điểm trung bình của đội -->
+
+<body>
+
+    <h1>Bai 5 JS</h1>
+    <script>
+        const calcAverage = (a, b, c) => (a + b + c) / 3;
+
+        const avgDolphins1 = calcAverage(44, 23, 71);
+        const avgKoalas1 = calcAverage(65, 54, 49);
+
+        const avgDolphins2 = calcAverage(85, 54, 41);
+        const avgKoalas2 = calcAverage(23, 34, 27);
+
+        const checkWinner = function(avgKoalas, avgDolhins) {
+            if (avgDolhins >= 2 * avgKoalas) {
+                console.log(`Dolphins win (${avgDolhins} vs ${avgKoalas})`);
+            } else if (avgKoalas >= 2 * avgDolhins) {
+                console.log(`Koalas win (${avgKoalas} vs ${avgDolhins})`);
+            } else {
+                console.log("No one wins");
+            }
+        }
+
+        checkWinner(avgKoalas1, avgDolphins1);
+        checkWinner(avgKoalas2, avgDolphins2);
+    </script>
+</body>
+
+</html>

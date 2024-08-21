@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai3JS</title>
+</head>
+<!-- Thử thách lập trình số 3
+Có hai đội thể dục dụng cụ, Cá heo và Gấu túi. Họ thi đấu với nhau 3 lần. 
+Người chiến thắng có điểm trung bình cao nhất sẽ giành được cúp!
+Nhiệm vụ của bạn:
+1. Tính điểm trung bình của mỗi đội, sử dụng dữ liệu kiểm tra bên dưới
+2. So sánh điểm trung bình của các đội để xác định người chiến thắng trong cuộc thi,
+và in ra bảng điều khiển. Đừng quên rằng có thể có một trận hòa, vì vậy hãy kiểm tra điều đó
+cũng như (hòa có nghĩa là họ có cùng điểm trung bình)
+
+3. Phần thưởng 1: Bao gồm yêu cầu về điểm tối thiểu là 100. Với quy tắc này, một
+đội chỉ thắng nếu có điểm cao hơn đội kia và đồng thời điểm ít nhất là 100 điểm. 
+Gợi ý: Sử dụng toán tử logic để kiểm tra điểm tối thiểu,cũng như nhiều khối else-if �
+
+4. Phần thưởng 2: Điểm tối thiểu cũng áp dụng cho trận hòa! Vì vậy, hòa chỉ xảy ra khi
+cả hai đội có cùng số điểm và cả hai đều có số điểm lớn hơn hoặc bằng 100
+điểm. Nếu không, không có đội nào giành được cúp
+
+Dữ liệu thử nghiệm:
+§ Dữ liệu 1: Dolphins đạt 96, 108 và 89 điểm. Koalas đạt 88, 91 và 110 điểm
+§ Phần thưởng dữ liệu 1: Dolphins đạt 97, 112 và 101 điểm. Koalas đạt 109, 95 và 123 điểm
+§ Phần thưởng dữ liệu 2: Dolphins đạt 97, 112 và 101 điểm. Koalas đạt 109, 95 và 106 điểm -->
+
+<body>
+    <h1>Bai 3 JS</h1>
+    <script>
+        dophinsScore1 = (96 + 108 + 89) / 3;
+        koalasScore1 = (88 + 91 + 110) / 3;
+        console.log(dophinsScore1, koalasScore1);
+
+        if (dophinsScore1 > koalasScore1 && dophinsScore1 >= 100) {
+            console.log("Dolphins win the trophy!");
+        } else if (koalasScore1 > dophinsScore1 && koalasScore1 >= 100) {
+            console.log("Koalas win the trophy!");
+        } else if (dophinsScore1 == koalasScore1 && dophinsScore1 >= 100 && koalasScore1 >= 100) {
+            console.log("Both win the trophy!");
+        } else {
+            console.log("No one wins the trophy!");
+        }
+
+        dophinsScore2 = (97 + 112 + 101) / 3;
+        koalasScore2 = (109 + 95 + 123) / 3;
+        console.log(dophinsScore2, koalasScore2);
+        if (dophinsScore2 > koalasScore2 && dophinsScore2 >= 100) {
+            console.log("Dolphins win the trophy!");
+        } else if (koalasScore2 > dophinsScore2 && koalasScore2 >= 100) {
+            console.log("Koalas win the trophy!");
+        } else if (dophinsScore2 == koalasScore2 && dophinsScore2 >= 100 && koalasScore2 >= 100) {
+            console.log("Both win the trophy!");
+        } else {
+            console.log("No one wins the trophy!");
+        }
+
+        dophinsScore3 = (97 + 112 + 101) / 3;
+        koalasScore3 = (109 + 95 + 106) / 3;
+        console.log(dophinsScore3, koalasScore3);
+        if (dophinsScore3 > koalasScore3 && dophinsScore3 >= 100) {
+            console.log("Dolphins win the trophy!");
+        } else if (koalasScore3 > dophinsScore3 && koalasScore3 >= 100) {
+            console.log("Koalas win the trophy!");
+        } else if (dophinsScore3 == koalasScore3 && dophinsScore3 >= 100 && koalasScore3 >= 100) {
+            console.log("Both win the trophy!");
+        } else {
+            console.log("No one wins the trophy!");
+        }
+    </script>
+</body>
+
+</html>
