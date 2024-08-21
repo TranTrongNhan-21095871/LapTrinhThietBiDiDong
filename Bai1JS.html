@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1 JS</title>
+</head>
+<!-- 
+JavaScript Fundamentals – Phần 1
+Thử thách lập trình #1
+Mark và John đang cố gắng so sánh BMI (Chỉ số khối cơ thể) của họ, được tính bằng công thức:
+BMI = khối lượng / chiều cao ** 2 = khối lượng / (chiều cao * chiều cao) (khối lượng tính bằng kg
+và chiều cao tính bằng mét).
+Nhiệm vụ của bạn:
+1. Lưu trữ khối lượng và chiều cao của Mark và John trong các biến
+2. Tính toán BMI của cả hai người bằng công thức (bạn thậm chí có thể triển khai cả
+cả hai phiên bản)
+3. Tạo một biến Boolean 'markHigherBMI' chứa thông tin về
+liệu Mark có BMI cao hơn John hay không.
+Dữ liệu thử nghiệm:
+§ Dữ liệu 1: Marks nặng 78 kg và cao 1,69 m. John nặng 92 kg và cao 1,95 m.
+§ Dữ liệu 2: Marks nặng 95 kg và cao 1,88 m. John nặng 85 kg và cao 1,76 m. -->
+
+<body>
+    <h1>So sánh giữa Mark và John</h1>
+
+    <script>
+        var marksWeight1 = 78;
+        var marksHeight1 = 1.69;
+        var johnsWeight1 = 92;
+        var johnsHeight1 = 1.95;
+
+        var marksBMT = marksWeight1 / (marksHeight1 * marksHeight1);
+        var johnsBMT = johnsWeight1 / (johnsHeight1 * johnsHeight1);
+
+        var markHigherBMI = marksBMT > johnsBMT;
+        console.log(markHigherBMI);
+
+        var marksWeight2 = 95;
+        var marksHeight2 = 1.88;
+        var johnsWeight2 = 85;
+        var johnsHeight2 = 1.76;
+
+        var marksBMT = marksWeight2 / (marksHeight2 * marksHeight2);
+        var johnsBMT = johnsWeight2 / (johnsHeight2 * johnsHeight2);
+
+        var markHigherBMI = marksBMT > johnsBMT;
+        console.log(markHigherBMI);
+    </script>
+
+</body>
+
+</html>

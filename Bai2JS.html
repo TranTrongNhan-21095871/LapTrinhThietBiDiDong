@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 2 JS</title>
+</head>
+<!-- Thử thách mã hóa số 2
+Sử dụng ví dụ BMI từ Thử thách số 1 và mã bạn đã viết, và
+cải thiện nó.
+Nhiệm vụ của bạn:
+1. In một đầu ra đẹp mắt vào bảng điều khiển, cho biết ai có BMI cao hơn. Thông báo
+là "BMI của Mark cao hơn John!" hoặc "BMI của John cao hơn Mark!"
+2. Sử dụng một mẫu theo nghĩa đen để đưa các giá trị BMI vào đầu ra. Ví dụ: "BMI của Mark (28,3) cao hơn John (23,9)!"
+Gợi ý: Sử dụng câu lệnh if/else � -->
+
+<body>
+    <h1>So sánh giữa Mark và John</h1>
+
+    <script>
+        var marksWeight1 = 78;
+        var marksHeight1 = 1.69;
+        var johnsWeight1 = 92;
+        var johnsHeight1 = 1.95;
+
+        var marksBMT = marksWeight1 / (marksHeight1 * marksHeight1);
+        var johnsBMT = johnsWeight1 / (johnsHeight1 * johnsHeight1);
+
+        var markHigherBMI = marksBMT > johnsBMT;
+        if (markHigherBMI) {
+            console.log("BMI của Mark (" + marksBMT.toFixed(1) + ") cao hơn John (" + johnsBMT.toFixed(1) + ")!");
+        } else {
+            console.log("BMI của John (" + johnsBMT.toFixed(1) + ") cao hơn Mark (" + marksBMT.toFixed(1) + ")!");
+        }
+
+        var marksWeight2 = 95;
+        var marksHeight2 = 1.88;
+        var johnsWeight2 = 85;
+        var johnsHeight2 = 1.76;
+
+        var marksBMT = marksWeight2 / (marksHeight2 * marksHeight2);
+        var johnsBMT = johnsWeight2 / (johnsHeight2 * johnsHeight2);
+
+        var markHigherBMI = marksBMT > johnsBMT;
+        if (markHigherBMI) {
+            console.log("BMI của Mark (" + marksBMT.toFixed(1) + ") cao hơn John (" + johnsBMT.toFixed(1) + ")!");
+        } else {
+            console.log("BMI của John (" + johnsBMT.toFixed(1) + ") cao hơn Mark (" + marksBMT.toFixed(1) + ")!");
+        }
+    </script>
+</body>
+
+</html>
