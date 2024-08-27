@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 10JS tuan 1</title>
+</head>
+<!-- Triển khai chức năng nghỉ ngơi trong trò chơi, để người chơi có thể đưa ra dự đoán mới!
+Nhiệm vụ của bạn:
+1. Chọn phần tử có lớp 'lại' và đính kèm trình xử lý sự kiện nhấp chuột
+2. Trong hàm xử lý, khôi phục các giá trị ban đầu của các biến 'score' và
+'secretNumber'
+3. Khôi phục các điều kiện ban đầu của các trường nhập tin nhắn, số, điểm và dự đoán
+
+4. Đồng thời khôi phục màu nền ban đầu (#222) và độ rộng số (15rem) -->
+<body>
+    <h1>Guess My Number!</h1>
+    <p class="message">Bắt đầu đoán...</p>
+    <p class="message">Số điểm của bạn là: <span class="score">20</span></p>
+    <p class="message">Số của bạn là: <span class="number">?</span></p>
+    <input type="number" class="guess" placeholder="Nhập số của bạn">
+    <button class="check">Kiểm tra!</button>
+    <button class="again" onclick="resetGame()">Lại</button>
+
+    <script>
+        function resetGame() {
+            score = 20;
+            secretNumber = Math.trunc(Math.random() * 20) + 1;
+            document.querySelector('.message').textContent = 'Bắt đầu đoán...';
+            document.querySelector('.score').textContent = score;
+            document.querySelector('.number').textContent = '?';
+            document.querySelector('.guess').value = '';
+            document.querySelector('body').style.backgroundColor = '#222';
+            document.querySelector('.number').style.width = '15rem';
+        }
+
+        let score = 20;
+        let secretNumber = Math.trunc(Math.random() * 20) + 1;
+
+        document.querySelector('.check').addEventListener('click', function() {
+            const guess = Number(document.querySelector('.guess').value);
+
+            if (!guess) {
+                document.querySelector('.message').textContent = 'Không có số!';
+            } else if (guess === secretNumber) {
+                document.querySelector('.message').textContent = 'Chính xác!';
+                document.querySelector('.number').textContent = secretNumber;
+                document.querySelector('body').style.backgroundColor = '#60b347';
+                document.querySelector('.number').style.width = '30rem';
+            } else if (guess !== secretNumber) {
+                if (score > 1) {
+                    document.querySelector('.message').textContent = guess > secretNumber ? 'Quá lớn!' : 'Quá nhỏ!';
+                    score--;
+                    document.querySelector('.score').textContent = score;
+                } else {
+                    document.querySelector('.message').textContent = 'Bạn đã thua!';
+                    document.querySelector('.score').textContent = 0;
+                }
+            }
+        });
+    </script>
+
+
+</body>
+</html>

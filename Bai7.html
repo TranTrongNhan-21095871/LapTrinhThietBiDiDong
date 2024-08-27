@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 7 tuan 1</title>
+</head>
+<!-- Quay lại với việc Mark và John so sánh BMI của họ! Lần này, hãy sử dụng các đối tượng để
+thực hiện các phép tính! Hãy nhớ rằng: BMI = khối lượng / chiều cao ** 2 = khối lượng
+/ (chiều cao * chiều cao) (khối lượng tính bằng kg và chiều cao tính bằng mét)
+Nhiệm vụ của bạn:
+1. Đối với mỗi người, hãy tạo một đối tượng có các thuộc tính cho tên đầy đủ, khối lượng và
+chiều cao (Mark Miller và John Smith)
+2. Tạo phương thức 'calcBMI' trên mỗi đối tượng để tính BMI (cùng
+phương thức trên cả hai đối tượng). Lưu giá trị BMI vào một thuộc tính và cũng trả về
+từ phương thức
+3. Ghi vào bảng điều khiển xem ai có BMI cao hơn, cùng với tên đầy đủ và
+BMI tương ứng. Ví dụ: "BMI của John (28,3) cao hơn của Mark (23,9)!"
+Dữ liệu thử nghiệm: Marks nặng 78 kg và cao 1,69 m. John nặng 92 kg và cao 1,95 m. -->
+
+<body>
+    <script>
+        const Mark = {
+            fullName: 'Mark Miller',
+            mass: 78,
+            height: 1.69,
+            calcBMI: function() {
+                this.BMI = this.mass / (this.height * this.height);
+                return this.BMI;
+            }
+        };
+
+        const John = {
+            fullName: 'John Smith',
+            mass: 92,
+            height: 1.95,
+            calcBMI: function() {
+                this.BMI = this.mass / (this.height * this.height);
+                return this.BMI;
+            }
+        };
+
+        if (Mark.calcBMI() > John.calcBMI()){
+            console.log(`${Mark.fullName}'s BMI (${John.BMI}) is higher than ${John.fullName}'s BMI (${Mark.BMI})!`);
+        } else if (Mark.BMI < John.BMI){
+            console.log(`${John.fullName}'s BMI (${John.BMI}) is higher than ${Mark.fullName}'s BMI (${Mark.BMI})!`);
+        } else {
+            console.log(`Both have the same BMI!`);
+        }
+
+    </script>
+</body>
+</html>

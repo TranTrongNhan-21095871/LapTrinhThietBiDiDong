@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 9 JS tuan 1</title>
+</head>
+<!-- Với một mảng nhiệt độ tối đa dự báo, nhiệt kế sẽ hiển thị một
+chuỗi với các nhiệt độ đã cho. Ví dụ: [17, 21, 23] sẽ in "... 17ºC trong 1
+ngày ... 21ºC trong 2 ngày ... 23ºC trong 3 ngày ..."
+Nhiệm vụ của bạn:
+1. Tạo một hàm 'printForecast' lấy một mảng 'arr' và ghi nhật ký một
+chuỗi như trên vào bảng điều khiển. Hãy thử với cả hai tập dữ liệu thử nghiệm.
+2. Sử dụng khuôn khổ giải quyết vấn đề: Hiểu vấn đề và chia nhỏ thành các
+bài toán con!
+Dữ liệu thử nghiệm:
+§ Dữ liệu 1: [17, 21, 23]
+§ Dữ liệu 2: [12, 5, -5, 0, 4] -->
+<body>
+    <script>
+        function printForecast(arr){
+            for (let i=0; i<arr.length; i++){
+                console.log(`... ${arr[i]}ºC trong ${i+1} ngày ...`);
+            }
+        }
+
+        printForecast([17, 21, 23]);
+        printForecast([12, 5, -5, 0, 4]);
+        
+    </script>
+</body>
+</html>
