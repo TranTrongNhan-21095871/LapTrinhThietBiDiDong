@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 12JS tuan2</title>
+</head>
+<!-- Tiếp tục với ứng dụng cá cược bóng đá của chúng ta! Tiếp tục sử dụng biến 'game' từ
+trước.
+Nhiệm vụ của bạn:
+1. Lặp qua mảng game.scored và in tên từng cầu thủ vào bảng điều khiển,
+cùng với số bàn thắng (Ví dụ: "Bàn thắng 1: Lewandowski")
+2. Sử dụng vòng lặp để tính tỷ lệ cược trung bình và ghi vào bảng điều khiển (Chúng ta đã
+học cách tính trung bình, bạn có thể kiểm tra nếu không nhớ)
+3. In 3 tỷ lệ cược vào bảng điều khiển, nhưng theo cách định dạng đẹp, chính xác như thế này:
+Tỷ lệ cược chiến thắng Bayern Munich: 1,33
+Tỷ lệ cược hòa: 3,25
+Tỷ lệ cược chiến thắng Borrussia Dortmund: 6,5
+Lấy tên đội trực tiếp từ đối tượng trò chơi, không mã hóa cứng
+(trừ "hòa"). Gợi ý: Lưu ý cách tỷ lệ cược và đối tượng trò chơi có
+tên thuộc tính giống nhau �
+4. Phần thưởng: Tạo một đối tượng có tên là 'scorers' chứa tên của
+các cầu thủ ghi bàn dưới dạng thuộc tính và số bàn thắng dưới dạng giá trị. Trong
+trò chơi này, nó sẽ trông như thế này:
+{
+Gnarby: 1,
+Hummels: 1,
+Lewandowski: 2
+} -->
+
+<body>
+    <h1>Bai 12JS tuan 2</h1>
+    <script>
+        const game = {
+            odds: {
+                team1: 1.25,
+                team2: 3.25,
+                draw: 3.25,
+            },
+            scored: ['Davies', 'Muller', 'Lewandowski', 'Kimmich', ],
+        }
+
+        for (let i = 0; i < game.scored.length; i++) {
+            console.log(`Bàn thắng ${i+1}: ${game.scored[i]}`);
+        }
+    </script>
+</body>
+
+</html>
