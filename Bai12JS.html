@@ -44,6 +44,23 @@ Lewandowski: 2
         for (let i = 0; i < game.scored.length; i++) {
             console.log(`Bàn thắng ${i+1}: ${game.scored[i]}`);
         }
+
+        let sum = 0;
+        for (const odd of Object.values(game.odds)) {
+            sum += odd;
+        }
+        console.log(`Tỷ lệ cược trung bình: ${sum / Object.values(game.odds).length}`);
+
+        for (const [team, odd] of Object.entries(game.odds)) {
+            const teamStr = team === 'draw' ? 'hòa' : `chiến thắng ${team}`;
+            console.log(`Tỷ lệ cược ${teamStr}: ${odd}`);
+        }
+
+        const scorers = {
+            Gnarby: 1,
+            Hummels: 1,
+            Lewandowski: 2,
+        }
     </script>
 </body>
 
